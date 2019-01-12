@@ -1,0 +1,16 @@
+{
+  "name": "wdio-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "DEBUG=* node test2.js"
+  },
+  "author": "Unknown",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/puppeteer": "^1.9.0",
+    "puppeteer": "^1.9.0",
+    "axios": "^0.18.0"
+  }
+}
