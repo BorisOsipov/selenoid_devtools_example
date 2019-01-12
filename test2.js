@@ -18,8 +18,8 @@ const axios = require("axios");
             });
         const sessionId = data.sessionId;
 
-        console.log(`DevTools url ws://10.20.12.138:4444/devtools/${sessionId}`);
-        const connect = await puppeteer.connect({browserWSEndpoint: `ws://10.20.12.138:4444/devtools/${sessionId}`});
+        console.log(`DevTools url ws://${selenoidUrl}:4444/devtools/${sessionId}`);
+        const connect = await puppeteer.connect({browserWSEndpoint: `ws://${selenoidUrl}:4444/devtools/${sessionId}`});
         const page = await connect.newPage();
         await page.goto('https://example.com');
         await connect.close();
