@@ -20,8 +20,8 @@ const axios = require("axios");
 
         console.log(`DevTools url ws://10.20.12.138:4444/devtools/${sessionId}`);
         const connect = await puppeteer.connect({browserWSEndpoint: `ws://10.20.12.138:4444/devtools/${sessionId}`});
-
         const page = await connect.newPage();
+        await page.goto('https://example.com');
         await connect.close();
     } catch (e) {
         console.log("Error");
